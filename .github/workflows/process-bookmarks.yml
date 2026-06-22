@@ -1,0 +1,48 @@
+name: Process Bookmarks
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'JSON array of URLs to add'
+        required: true
+        type: string
+      collection:
+        description: 'Collection name (optional)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm install node-fetch@3 cheerio@1
+
+      - name: Process URLs
+        env:
+          INPUT_URLS: ${{ github.event.inputs.urls }}
+          INPUT_COLLECTION: ${{ github.event.inputs.collection }}
+        run: node .github/scripts/process.mjs
+
+      - name: Commit updated bookmarks
+        run: |
+          git config user.name  "bookmark-bot"
+          git config user.email "bot@jubilancy"
+          git add bookmarks.json
+          git diff --staged --quiet || git commit -m "bookmarks: add $(node -e "const u=JSON.parse(process.env.INPUT_URLS||'[]');console.log(u.length)") URL(s)"
+          git push
+        env:
+          INPUT_URLS: ${{ github.event.inputs.urls }}
