@@ -1,7 +1,71 @@
 {
-  "bookmarks": [],
+  "bookmarks": [
+    {
+      "id": "0b7b2b5c-c579-4ca7-9763-e11518e23a6d",
+      "url": "https://www.browserling.com/bookmarklets",
+      "title": "Browser Bookmarklets - Browserling",
+      "description": "Browserling's bookmarklets let you quickly access your favorite browsers from your bookmarks. One click and you're in Browserling testing!",
+      "image": "https://www.browserling.com/images/browserling-cross-browser-testing-fb-og-image.png",
+      "favicon": "https://www.browserling.com/favicon.ico",
+      "domain": "browserling.com",
+      "tags": [
+        "web-dev",
+        "devtools",
+        "design",
+        "book"
+      ],
+      "collection": "test",
+      "added": "2026-06-22T20:14:21.743Z",
+      "pinned": false
+    },
+    {
+      "id": "1ee7e4c3-ef49-4059-90b4-502e14842e9b",
+      "url": "https://www.browserling.com/extensions",
+      "title": "Browser Extensions - Browserling",
+      "description": "Browserling's browser extensions let you quickly start testing from the toolbar of your browser. One click and you're already testing.",
+      "image": "https://www.browserling.com/images/browserling-cross-browser-testing-fb-og-image.png",
+      "favicon": "https://www.browserling.com/favicon.ico",
+      "domain": "browserling.com",
+      "tags": [
+        "web-dev",
+        "devtools",
+        "design",
+        "tool",
+        "fun"
+      ],
+      "collection": "test",
+      "added": "2026-06-22T20:14:21.755Z",
+      "pinned": false
+    },
+    {
+      "id": "ae44399d-82ea-457d-8e1d-b2f91f420f4c",
+      "url": "https://glasp.co/settings/integrations",
+      "title": "glasp.co",
+      "description": "",
+      "image": "",
+      "favicon": "",
+      "domain": "glasp.co",
+      "tags": [],
+      "collection": "test",
+      "added": "2026-06-22T20:14:21.702Z",
+      "pinned": false
+    },
+    {
+      "id": "0cdf3db9-2403-4c3e-980e-20d34be5adde",
+      "url": "https://glasp.co/mcp",
+      "title": "glasp.co",
+      "description": "",
+      "image": "",
+      "favicon": "",
+      "domain": "glasp.co",
+      "tags": [],
+      "collection": "test",
+      "added": "2026-06-22T20:14:21.700Z",
+      "pinned": false
+    }
+  ],
   "meta": {
-    "updated": "",
-    "count": 0
+    "updated": "2026-06-22T20:14:21.755Z",
+    "count": 4
   }
 }
