@@ -37,12 +37,10 @@ jobs:
           INPUT_COLLECTION: ${{ github.event.inputs.collection }}
         run: node .github/scripts/process.mjs
 
-      - name: Commit updated bookmarks
+      - name: Commit
         run: |
           git config user.name  "bookmark-bot"
-          git config user.email "bot@jubilancy"
+          git config user.email "bot@users.noreply.github.com"
           git add bookmarks.json
-          git diff --staged --quiet || git commit -m "bookmarks: add $(node -e "const u=JSON.parse(process.env.INPUT_URLS||'[]');console.log(u.length)") URL(s)"
+          git diff --staged --quiet || git commit -m "bookmarks: batch add"
           git push
-        env:
-          INPUT_URLS: ${{ github.event.inputs.urls }}
